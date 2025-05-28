@@ -1,0 +1,24 @@
+.header-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   gap: 2rem;
+    background-color: #203955;
+   padding: 1rem 0rem 1rem 0rem;
+  
+}
+.header-logo img{
+    max-width: 80px;
+    max-height:80px;
+  
+ 
+}
+
+.header-title h1{
+
+    font-weight: 600;
+    font-size: 39.69px;
+    line-height: 60px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
