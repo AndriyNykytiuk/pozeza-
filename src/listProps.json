@@ -10,7 +10,7 @@
     "inspections": [
       { "id": 1,
        "name": "Драбини",
-      "inspectionDetails":[
+       "inspectionDetails":[
         {"id":1,"date":"22.22.2","state":true,"nextDate":"11.11.11"}
       ] },
       { "id": 2, "name": "Ремені" },
