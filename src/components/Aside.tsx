@@ -3,7 +3,23 @@ import '../css/aside.css';
 import { IoIosArrowDown, IoIosArrowBack } from "react-icons/io";
 import Properties from './Properties';
 
-function Aside({ propertyList, selectedCategoryId, setSelectedCategoryId }) {
+interface Property {
+  id: number;
+  category: string;
+  inspections: { id: number; name: string }[];
+}
+
+interface AsideProps {
+  propertyList: Property[];
+  selectedCategoryId: number | null;
+  setSelectedCategoryId: React.Dispatch<React.SetStateAction<number | null>>;
+}
+
+function Aside({
+  propertyList,
+  selectedCategoryId,
+  setSelectedCategoryId,
+}: AsideProps) {
   const departmentsList = [
     { id: 1, name: "22 ДПРЧ" },
     { id: 2, name: "12 ДПРЧ" },
@@ -12,6 +28,7 @@ function Aside({ propertyList, selectedCategoryId, setSelectedCategoryId }) {
     { id: 5, name: "АРЧ АРЗ СП" },
     { id: 6, name: "1 ДПРЧ" },
   ];
+
   const [listDepartments, setListDepartments] = React.useState('Оберіть підрозділ');
   const [isOpen, setIsOpen] = React.useState(false);
 

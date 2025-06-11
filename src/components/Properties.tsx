@@ -1,8 +1,21 @@
-import React from 'react';
+
 import '../css/properties.css';
 import { IoIosArrowDown, IoIosArrowBack } from "react-icons/io";
 
-function Properties({ propertyList, selectedCategoryId, setSelectedCategoryId }) {
+
+interface Property {
+  id: number;
+  category: string;
+  inspections: { id: number; name: string }[];
+}
+interface PropertyProps{
+  propertyList: Property[];
+  selectedCategoryId: number | null;
+  setSelectedCategoryId: React.Dispatch<React.SetStateAction<number | null>>;
+}
+
+
+function Properties({ propertyList, selectedCategoryId, setSelectedCategoryId }: PropertyProps) {
   const toggleArrowProperties = (id: number) => {
     setSelectedCategoryId(prevState => prevState === id ? null : id);
   };

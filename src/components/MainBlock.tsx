@@ -1,8 +1,21 @@
-import React from 'react';
+
 import '../css/mainBlock.css';
 import DocumentPole from './DocumentPole';
 
-function MainBlock({ propertyList, selectedCategoryId }) {
+
+interface Property {
+  id: number;
+  category: string;
+  documents: { id: number; name: string }[];
+}
+
+interface MainBlockProps {
+  propertyList: Property[];
+  selectedCategoryId: number | null;
+    setSelectedCategoryId: React.Dispatch<React.SetStateAction<number | null>>;
+}
+
+function MainBlock({ propertyList, selectedCategoryId }: MainBlockProps) {
   return (
     <div className='main-block'>
       <DocumentPole

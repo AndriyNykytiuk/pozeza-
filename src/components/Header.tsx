@@ -1,4 +1,4 @@
-import React from 'react'
+
 import dsnsLogo from '../img/dsns_logo.svg'
 import '../css/header.css'
 function Header() {
